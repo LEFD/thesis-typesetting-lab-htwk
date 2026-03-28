@@ -92,17 +92,33 @@
   set page(
     paper: "a4",
     margin: (x: 30mm, top: 25mm, bottom: 25mm),
-    numbering: "1",
+    numbering: "i", // Hier stellen wir für das Verzeichnis auf "i"
     header: [
       #set text(8pt)
-      // Kopfzeile mit Kapitelnamen (optional)
       #align(right)[
         // #smallcaps(title)
       ]
       #line(length: 100%, stroke: 0.5pt)
     ],
+    footer: context [
+      // 1. Die Linie über die gesamte Breite der Seite
+      #line(length: 100%, stroke: 0.5pt)
+      
+      // 2. Ein kleiner Abstand zwischen Linie und Zahl
+      #v(2mm)
+      
+      // 3. Die eigentliche Seitenzahl (hier zentriert)
+      #align(center)[
+        // .display() ohne Parameter übernimmt automatisch das "i" oder "1" 
+        // aus der aktuellen 'set page(numbering: ...)' Regel!
+        #counter(page).display()
+      ]
+    ]
   )
   
+  // Zähler für die Verzeichnisse explizit auf 1 setzen (Seite i)
+  counter(page).update(1)
+
   // Inhaltsverzeichnis
   outline(title: "Inhaltsverzeichnis", indent: auto)
   pagebreak()
@@ -124,5 +140,12 @@
   // ==========================================
   // HAUPTTEIL
   // ==========================================
+  
+  // Zähler wieder auf 1 zurücksetzen
+  counter(page).update(1)
+  
+  // Seitenzahlen-Stil für den Hauptteil auf normale Zahlen ändern
+  set page(numbering: "1")
+
   body
 }
