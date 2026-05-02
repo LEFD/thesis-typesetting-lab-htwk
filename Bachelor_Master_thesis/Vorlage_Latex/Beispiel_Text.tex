@@ -1,0 +1,231 @@
+\newpage
+\chapter{Kapitel: Formatierung}
+
+Diese Vorlage ist wie folgt formatiert:
+\begin{itemize}
+    \item Einseitiger Druck
+    \item Seitenformat: \textbf{A4}
+    \item Schriftgröße: \textbf{12~pt}
+    \item Zeilenabstand: \textbf{1,5}
+    \item Seitenränder: \begin{itemize}
+        \item Links 2,5~cm \gls{inkl} Binderandkorrektur
+        \item Rechts 2,5~cm
+        \item Oben 2,5~cm \gls{inkl} Kopfzeile
+        \item Unten 4~cm \gls{inkl} Fußzeile
+    \end{itemize}
+\end{itemize}
+
+
+\newpage
+\chapter{Kapitel: Einführung in Latex}
+
+In den folgenden Absätzen werden ausgewählte Beispiele für die Anwendung von Latex erläutert. Dabei wird nur kurz auf das jeweilige Beispiel eingegangen. Für ausführliche Erklärungen kann man entsprechende Literatur zur Hilfe nehmen.
+
+Vorab vier wichtige Befehle für das Hervorheben von Informationen.
+\begin{itemize}
+    \item Fettgedruckt \textbf{\textbackslash textbf\{text\}}
+    \item Kursivschrift \textit{\textbackslash textit\{text\}}
+    \item Unterstreichen \uline{\textbackslash uline\{text\}} (mehr unter \textbf{\textbackslash usepackage\{ulem\}})
+    \item Färben \textcolor{red}{\textbackslash textcolor\{farbe\}\{text\}} (mehr unter \textbf{\textbackslash usepackage\{color\}})
+\end{itemize}
+
+\vspace{2 cm}       % damit kann der Abstand zwischen dem oberen Text und dem unteren Bild manipuliert werden
+Das Logo der HTWK (Abb. \ref{fig:HTWK_logo}) wird in dieser Vorlage für die Darstellung von Bilddateien herangezogen. Bilddateien, wie \textit{*.png}, \textit{*.jpg}, \textit{*.eps}, \textit{*.bmp}, aber auch \textit{*.pdf}, können mit dem Usepackage \textit{graphicx} eingebunden werden.
+
+\vspace{2 cm}       % damit kann der Abstand zwischen dem oberen Text und dem unteren Bild manipuliert werden
+\begin{figure}[ht]
+ \centering
+ \includegraphics[angle=0, scale=0.1]{Abbildungen/HTWK_Black_K.jpg}
+ \caption{Bildunterschrift HTWK Logo}
+ \label{fig:HTWK_logo}
+\end{figure}
+
+
+
+\newpage
+\section{Unterkapitel: Verweise und Referenzierung}
+\subsection{Unterunterkapitel: Label}
+
+Der Verweis auf die Nummer der Abbildung, Tabelle oder anderer Objekte wird in runde Klammern gesetzt. Eine Abbildung, Tabelle oder andere Objekte können über ein \textbf{\textbackslash label\{\}} mit dem Befehl \textbf{\textbackslash ref\{\textit{name}\}} referenziert werden. Dabei wird die Nummer des referenzierten Objektes zurückgegeben. Die Label können für verschiedene Objekte definiert werden und sollten einen eindeutigen Namen tragen.
+\begin{itemize}
+    \item Abbildungen \textbf{\textit{fig:name}}
+    \item Tabellen \textbf{\textit{tab:name}}
+    \item Kapitel \textbf{\textit{chp:name}}
+    \item Abschnitt \textbf{\textit{sec:name}}
+    \item Unterabschnitt \textbf{\textit{ssec:name}}
+    \item Unterunterabschnitt \textbf{\textit{ssec:name}}
+    \item Abkürzungen \textbf{\textit{acc:name}}
+    \item Glossar \textbf{\textit{glo:name}}
+    \item Verlinkungen \textbf{\textit{ink:name}}
+\end{itemize}
+
+\textbf{Beispiel:} Das Logo der HTWK ist mit dem Label \textbf{\textbackslash label\{fig:HTWK\_logo\}} \linebreak versehen und kann mit dem Befehl \textbf{\textbackslash ref\{\textit{fig:HTWK\_logo}\}} referenziert werden.
+Da das HTWK Logo die erste Abbildung in diesem Dokument ist, wird die Abbildungsnummer \textbf{\ref{fig:HTWK_logo}} zurückgegeben.
+
+
+
+\newpage
+\subsection{Unterunterkapitel: Abkürzungen}
+Bei der Verwendung von Abkürzungen, die in der Datei \textit{Abkuerzungsverzeichnis.tex} aufgelistet sind, und das erste mal in einem Dokument mit dem Befehl \textbf{\textbackslash gls\{name\}} referenziert werden, wird als erstes das ausgeschriebene Wort und danach in Klammern die Abkürzung geschrieben:
+%\acs{Abb.}
+%\acs{inkl.}
+
+\textbf{ \gls{Abb} }
+
+Wenn die Abkürzung ein weiteres mal referenziert wird, steht nur noch die Abkürzung im Text:
+
+\textbf{ \gls{Abb} }
+
+Die Darstellung im Text funktioniert automatisch sowie die Abkürzung in der Datei \textit{Abkuerzungsverzeichnis.tex} aufgelistet ist. Im erzeugten pdf wird die Liste der Abkürzungen nicht automatisch aktualisiert. Zur Aktualisierung der Liste muss der Befehl \dq Glossary\dq{} ausgeführt werden.
+Wer mehr über das Abkürzungsverzeichnis erfahren möchte, muss sich mit dem Usepackage \textit{glossaries} auseinander setzen.
+
+\newpage
+\subsection{Unterunterkapitel: Symbolverzeichnis}
+Das Symbolverzeichnis ist ein wichtiger Punkt für das Verständnis einer wissenschaftlichen Arbeit. In diesem Beispiel wird für die Auflistung der verwendeten Symbole das Usepackage \textit{listofsymbols} verwendet. Dafür werden die Symbole in der Datei \textit{Symbolverzeichnis.tex} definiert, um sie dann mit dem Symbol-Label im Text aufrufen zu können.
+\\ Z.B. wird dieses Symbol (\symnz) mit dem Label \textbf{\textbackslash symnz} aufgerufen.
+
+
+
+\subsection{Unterunterkapitel: Fußnoten}
+Die Verwendung von Fußnoten\footnote{sind Anmerkungen, die aus dem Fließtext ausgelagert sind} ermöglicht es, den Lesefluss fließender zu gestallten und somit das Verständnis eines Textes zu erhöhen. Die Fußnoten werden am Ende der Seite aufgelistet. Eine Fußnote wird mit dem Befehl \textbf{\textbackslash footnote\{Text der Fußnote\}} erzeugt.
+
+\textit{Hinweis:} Fußnoten sparsam verwenden. Eine Fußnote, die sich auf ein Wort bezieht, kann direkt an dieses angefügt werden. Fußnoten, die sich auf einen Satz beziehen, sollten nach dem Satzzeichen angefügt werden.
+
+
+\newpage
+\subsection{Unterunterkapitel: Zitate}
+\glqq Eine gute Möglichkeit, Zitate einzufügen und zu formatieren, ist BibTeX. Dieses Programm erlaubt es, aus einer Datenbank an Einträgen (entries) verschiedener Typen (Entry types, z. B. Artikel, Bücher, Konferenzbände) die für den aktuellen Text benötigten herauszusuchen (indem man sie zitiert) und sie - bei Bedarf sortiert (z.B. nach dem Autor oder dem Alphabet) - an einer gewünschten Stelle auszugeben. Dazu benötigt es eine Datenbank, einen Stil und natürlich Zitate im Text.\grqq \cite{2016:Zitieren}
+
+Die Datenbank wird in der Datei \textit{Literatur.bib} angelegt und im Text mit dem Befehl \textbf{\textbackslash cite\{cit:name\}} verknüpft. Die Nummer des Zitats wird in eckige Klammern gefasst.
+
+% https://de.wikibooks.org/wiki/LaTeX-Kompendium:_Zitieren_mit_BibTeX
+
+
+Neben BibTex gibt es noch eine ganze Reihe weiterer Programme, welche man sich mal anschauen kann.
+\begin{itemize}
+    \item BibLatex (\url{https://ctan.org/pkg/biblatex?lang=de})
+    \item Biber (\url{http://biblatex-biber.sourceforge.net})
+    \item Synapsen (\url{http://www.verzetteln.de/synapsen})
+    \item JabRef (\url{http://www.jabref.org})
+\end{itemize}
+
+
+\newpage
+\subsection{Unterunterkapitel: Verlinkungen}
+Für individuelle Verlinkungen zu bestimmtem Textpassagen können mit dem Befehl\linebreak \textbf{\textbackslash hypertarget\{ink:name\}\{text\}} Anker im Ziel gesetzt werden und diese mit dem\linebreak Befehl \textbf{\textbackslash hyperlink\{ink:name\}\{text\}} verlinkt werden.
+
+\hyperlink{ink:Anker}{Hier ist die Verlinkung zum Anker ...} 		% erzeugt Querverweis Text auf Anker
+
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+
+\hypertarget{ink:Anker}{Hier ist der Anker!} 			            % erzeugt lokalen Anker auf Text
+
+
+
+
+
+\newpage
+\section{Unterkapitel: Darstellung von Bilddateien}
+
+Auf dieser Seite wird mittels dem Usepackage \textit{wrapfigure} ein Bild von Text umflossen eingebunden. Zusätzlich ist das Bild um 90 Grad gedreht.
+
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+\begin{wrapfigure}[]{ht}[0cm]{6cm}
+    \centering
+    \includegraphics[angle=90, scale=0.1]{Abbildungen/HTWK_Zusatz_de_V_Black_K.jpg}
+    \caption{Bildunterschrift Fließtext}
+    \label{fig:HTWK_logo2}
+\end{wrapfigure}
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+
+Des Weiteren ist es möglich, mit dem Usepackage \textit{subfigure} mehrere Grafiken nebeneinander anzuordnen.
+
+\begin{figure}[ht]
+    \centering
+    \subfigure[Bildunterschrift der linken Grafik]{\includegraphics[width=0.55\textwidth]{Abbildungen/HTWK_Black_K.jpg}}
+    \subfigure[Bildunterschrift der rechten Grafik]{\includegraphics[width=0.35\textwidth]{Abbildungen/HTWK_Black_K.jpg}}
+\caption{Bildunterschrift für beide Grafiken}
+\end{figure}
+
+
+
+\newpage
+\section{Unterkapitel: Darstellung von PDF-Dateien}
+
+PDF-Dateien können sowohl mit dem Usepackage \textit{graphicx}, als auch mit \textit{pdfpages} eingebunden werden.
+Auf dieser Seite und den folgenden drei Seiten werden verschiedene Darstellungsmöglichkeiten gezeigt.
+Das Usepackage \textit{pdfpages} ermöglicht es einzelne oder auch mehrere Seiten aus einer PDF-Datei auszuwählen.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[angle=0, scale=0.5]{Anhang/Beispiel_PDF.pdf}
+    \caption{Bildunterschrift PDF-Datei}
+    \label{pdf:HTWK_logo}
+\end{figure}
+
+
+% eingebundene PDF ohne Kopf- und Fußzeilen
+\includepdf[scale=0.9, pages={1},]{Anhang/Beispiel_PDF.pdf}
+
+% eingebundene PDF mit Kopf- und Fußzeilen und ohne Kapitelnummer
+\includepdf[scale=0.9, pages={2}, pagecommand={}]{Anhang/Beispiel_PDF.pdf}
+
+% eingebundene PDF mit Kopf- und Fußzeilen und mit Kapitelnummer
+\includepdf[scale=0.9, pages={3}, pagecommand={\subsection{Eingebundene PDF mit Kapitelnummer}}]{Anhang/Beispiel_PDF.pdf}
+
+
+
+\newpage
+\section{Unterkapitel: Matheumgebung}
+
+In LaTeX wird für die Darstellung von Berechnungsformeln eine Matheumgebung verwendet, welche auf verschiedene Wege stattfinden kann. In diesem Beispiel wird die Umgebung \textit{align} verwendet. Dafür wird das Usepackage \textit{amsmath}\cite{2017:amsmath} benötigt und für spezielle mathematische Symbole das Usepackage \textit{amssymb}. 
+
+Die \textit{align} Umgebung bietet die Möglichkeit zu entscheiden, ob die Formeln nummeriert werden sollen (\textbackslash begin\{\textit{align}\}) oder nicht (\textbackslash begin\{\textit{align*}\}). Für den Fall, dass nur einzelne Formeln nicht nummeriert werden sollen, kann hinter die entsprechenden Formel der Befehl \textit{\textbackslash nonumber} geschrieben werden.
+
+Für den schnellen Einstieg gibt es auch einen LaTeX-Formeleditor:\\ \url{https://www.zahlen-kern.de/editor}
+\begin{align*}
+\\ a^2+b^2 & = c^2
+\\ \frac{20}{5} & = \underline{\underline{4}}
+\\ \varphi_n & \rightarrow\infty
+\\ x_{3i}(t) & \approx \sin(2 \cdot \pi \cdot t)
+\\ \mid-23\mid & = 23
+\\ \pi/2 & \mathrel{\widehat{=}} 90^\circ
+\\ f(x, y) & = x^y
+\\ 10\,\% & \mathrel{\widehat{=}} 0,1
+\end{align*}
+
+In den oben aufgelisteten Formeln sind ein paar wichtige Mathebefehle bzw. Symbole verwendet worden.
+Besonders zu beachten ist der Abstand zwischen der 10 und dem \% Zeichen in der letzte Zeile. Die Zahl ist mit einem halben geschützten Leerzeichen (\textbackslash ,) von der Einheit getrennt. Dadurch ist stehen die Zahl und die Einheit nicht so gedrungen beieinander und zudem werden sie bei einem Zeilenumbruch nicht getrennt.
+
+
+Es können auch einzelne Formeln in Texten verwendet werden, welche mit \$ ... \$ umgeben sind, um die Matheumgebung aufzurufen.
+\\ Z.B.: $ i^2c $
+
+
+
+\newpage
+\section{Unterkapitel: Tabellen}
+
+Die Tabellen-Umgebungen beinhaltet in der Regel eine Zentrierung, eine Überschrift mit Nummerierung, ein Label und eine Tabulatorumgebung, welche die eigentliche Tabelle darstellt. Tabellen zu formatieren ist keine leichte Übung. Aus diesem Grund gibt es den Verweis auf einen online Tabellengenerator:\\ \url{http://www.tablesgenerator.com/#}
+
+% Tabellenumgebung
+\begin{table}[ht]
+    \centering
+    \caption{Tabellenüberschrift}
+    \label{tab:Label}
+    \begin{tabular}{c|c|l|r}
+        Symbolname  & kleines Symbol    & großes Symbol & Variable\\
+        \hline
+        alpha       & $\alpha$          & ---           & ---\\
+        omega       & $\omega$          & $\Omega$      & ---\\
+        pi          & $\pi$             & $\Pi$         & $\varpi$\\
+        phi         & $\phi$            & $\Phi$        & $\varphi$\\
+    \end{tabular}
+\end{table}
