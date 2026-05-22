@@ -1,4 +1,9 @@
-#text(size: 18pt, weight: "bold")[Symbolverzeichnis] <sec:symbole>
+#heading(
+  outlined: false,
+  numbering: none,
+)[Symbolverzeichnis]
+
+<sec:symbole>
 
 #table(
   columns: (3cm, 1fr),
