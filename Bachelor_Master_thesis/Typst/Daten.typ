@@ -9,3 +9,7 @@
 #let chef = "Frau Yes"
 #let datum = [#datetime.today().display("[day].[month].[year]")]  //alternativ: "01.01.2026" oder 01. Januar 2026
 #let faculty = "Fakultät Ingenieurwissenschaften"
+
+// HTWK Logos
+#let logoHTWK = "/Bachelor_Master_thesis/Typst/Abbildungen/HTWK_Zusatz_de_V_Black_sRGB.png"
+#let logoFaculty = "/Bachelor_Master_thesis/Typst/Abbildungen/HTWK-Fakultaetszusatz_ing_schwarz_de.png"
