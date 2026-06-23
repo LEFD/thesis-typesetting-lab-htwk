@@ -1,5 +1,0 @@
-\printsymline{\mathbb{N}}{\mathbb{N}}{symnz}{Menge aller nat\unhbox \voidb@x \bgroup \let \unhbox \voidb@x \setbox \@tempboxa \hbox {u\global \mathchardef \accent@spacefactor \spacefactor }\accent 127 u\egroup \spacefactor \accent@spacefactor rlichen Zahlen ohne die Null}{1}
-\printsymline{\mathbb{N}_{0}}{\mathbb{N}_{0}}{symnzmn}{Menge aller nat\unhbox \voidb@x \bgroup \let \unhbox \voidb@x \setbox \@tempboxa \hbox {u\global \mathchardef \accent@spacefactor \spacefactor }\accent 127 u\egroup \spacefactor \accent@spacefactor rlichen Zahlen einschliesslich Null}{1}
-\printsymline{\mathbb{Z}}{\mathbb{Z}}{GZ}{Menge aller ganzen Zahlen}{1}
-\printsymline{\mathbb{Q}}{\mathbb{Q}}{RatZ}{Menge aller rationalen Zahlen}{1}
-\printsymline{\mathbb{R}}{\mathbb{R}}{RZ}{Menge aller reellen Zahlen}{1}

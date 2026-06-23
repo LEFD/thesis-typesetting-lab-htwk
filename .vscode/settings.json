@@ -1,15 +1,3 @@
 {
-    "latex-workshop.latex.autoBuild.run": "onSave",
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.synctex.afterBuild.enabled": true,
-    "editor.wordWrap": "on",
-    "files.exclude": {
-        "**/*.aux": true,
-        "**/*.bbl": true,
-        "**/*.blg": true,
-        "**/*.fls": true,
-        "**/*.log": true,
-        "**/*.fdb_latexmk": true,
-        "**/*.synctex.gz": true
-    }
+    "editor.wordWrap": "on"
 }
