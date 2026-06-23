@@ -29,8 +29,8 @@
   show heading: set block(above: 2em, below: 1.5em)
 
   // Kopf-/Fußzeile zentral für das gesamte Dokument. Die Seitennummerierung
-  // (i / 1) wird in main.typ pro Abschnitt umgeschaltet; die Titelseite
-  // schaltet Kopf-/Fußzeile über ihren eigenen #page-Block ab.
+  // (I / 1) regeln die Abschnitts-Helfer unten (frontmatter/mainmatter/
+  // backmatter); die Titelseite schaltet Kopf-/Fußzeile per #page-Block ab.
   set page(
     paper: "a4",
     margin: (x: 25mm, top: 25mm, bottom: 35mm),
@@ -52,5 +52,33 @@
     in-outline.update(false)
   }
 
+  body
+}
+
+// ===========================================================================
+// Abschnitte: Vorspann römisch (I, II, …), Hauptteil arabisch (1, 2, …),
+// Anhang setzt die römische Zählung des Vorspanns fort.
+// ===========================================================================
+
+// Letzter römischer Seitenstand des Vorspanns – für den Anhang gemerkt.
+#let roman-end = state("roman-end", 1)
+
+#let frontmatter(body) = {
+  set page(numbering: "I")
+  counter(page).update(1)
+  body
+  // Seitenstand merken, damit der Anhang ihn fortsetzen kann
+  context roman-end.update(counter(page).get().first())
+}
+
+#let mainmatter(body) = {
+  set page(numbering: "1")
+  counter(page).update(1)
+  body
+}
+
+#let backmatter(body) = {
+  set page(numbering: "I")
+  context counter(page).update(roman-end.get())
   body
 }
