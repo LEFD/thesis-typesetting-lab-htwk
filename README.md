@@ -10,9 +10,8 @@ Masterarbeiten im Stil der HTWK Leipzig.
 ## Schnellstart
 
 1. Repository öffnen (VS Code mit der Erweiterung
-   [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist),
-   wird über `.vscode/extensions.json` empfohlen).
-2. **Einmalig** die lokale Konfiguration anlegen:
+   [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist).
+2. Einmalig die *lokale* Konfiguration anlegen:
 
    ```sh
    cp config-override.example.typ config-override.typ
@@ -29,16 +28,13 @@ zwei Dateien:
 
 | Datei | Versioniert? | Zweck |
 | --- | --- | --- |
-| `config.typ` | ✅ | Standardwerte der Vorlage. Hier nichts Persönliches eintragen. |
+| `config.typ` | ✅ | Standardwerte der Vorlage. (Hier nichts Persönliches eintragen). |
 | `config-override.typ` | ❌ (git-ignored) | Deine persönlichen Werte. Überschreibt einzelne Felder aus `config.typ`. |
 | `config-override.example.typ` | ✅ | Kopiervorlage für `config-override.typ`. |
 
 In `config-override.typ` werden nur die Felder gesetzt, die vom Standard
 abweichen – alle übrigen kommen aus `config.typ` (`defaults + overrides`).
 
-> Weil `config-override.typ` von Git ignoriert wird, fehlt sie in einem frischen
-> Clone. Deshalb der einmalige `cp`-Schritt aus dem Schnellstart – sonst kann
-> `config.typ` die Datei nicht importieren.
 
 ## Projektstruktur
 
@@ -60,6 +56,11 @@ references.bib  Literaturquellen
   (`1, 2, …`), Anhang setzt die römische Zählung fort.
 - **`flex-caption(lang, kurz)`** in `template.typ` erlaubt eine lange
   Bildunterschrift im Text und eine kurze im Abbildungsverzeichnis.
+
+## KI-Hinweis
+
+> 🤖 Teile dieser Vorlage (Struktur, Code und Dokumentation) wurden mit
+> KI-Unterstützung (Claude Opus 4.8) erstellt und überarbeitet.
 
 ## Lizenz
 
