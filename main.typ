@@ -1,12 +1,12 @@
 #import "config.typ": cfg
-#import "template.typ": project, titlepage
+#import "template.typ": project
 
 #show: project.with(cfg: cfg)
 
 // ===========================================================================
-// Titelseite (eigener #page-Block ohne Kopf-/Fußzeile und Seitenzahl)
+// Deckblatt
 // ===========================================================================
-#titlepage(cfg)
+#include "formalia/deckblatt.typ"
 
 // ===========================================================================
 // Vorspann – römische Seitenzahlen
@@ -14,16 +14,16 @@
 #set page(numbering: "I")
 #counter(page).update(1)
 
-#include "chapters/frontmatter/00_Sperrvermerk.typ"
+#include "formalia/sperrvermerk.typ"
 #pagebreak()
 
-#include "chapters/frontmatter/01_Aufgabenstellung.typ"
+#include "formalia/aufgabenstellung.typ"
 #pagebreak()
 
-#include "chapters/frontmatter/02_Abstract.typ"
+#include "formalia/abstract.typ"
 #pagebreak()
 
-#include "chapters/frontmatter/03_Abkuerzungsverzeichnis.typ"
+#include "formalia/abkuerzungsverzeichnis.typ"
 #pagebreak()
 
 #outline(title: [Inhaltsverzeichnis], indent: auto)
@@ -35,7 +35,7 @@
 #outline(title: [Tabellenverzeichnis], target: figure.where(kind: table))
 #pagebreak()
 
-#include "chapters/frontmatter/04_Symbolverzeichnis.typ"
+#include "formalia/symbolverzeichnis.typ"
 #pagebreak()
 
 // römischen Seitenstand merken, um ihn im Anhang fortzusetzen
@@ -48,13 +48,13 @@
 #set page(numbering: "1")
 #counter(page).update(1)
 
-#include "chapters/content/01_Einleitung.typ"
+#include "chapters/einleitung.typ"
 #pagebreak()
 
-#include "chapters/content/02_Typst_grundlagen.typ"
+#include "chapters/typst_grundlagen.typ"
 #pagebreak()
 
-#include "chapters/content/06_Ausblick.typ"
+#include "chapters/ausblick.typ"
 #pagebreak()
 
 // ===========================================================================
@@ -63,11 +63,11 @@
 #context { counter(page).update(roman-page.get()) }
 #set page(numbering: "I")
 
-#include "chapters/backmatter/08_Anhang.typ"
+#include "appendix/anhang.typ"
 #pagebreak()
 
 = Literaturverzeichnis <sec:literatur>
 #bibliography("references.bib", style: "ieee", title: none)
 #pagebreak()
 
-#include "chapters/backmatter/10_Eidesstattliche_Erklaerung.typ"
+#include "formalia/eidesstattliche_erklaerung.typ"

@@ -43,15 +43,15 @@ abweichen – alle übrigen kommen aus `config.typ` (`defaults + overrides`).
 ## Projektstruktur
 
 ```text
-assets/
-  logos/        HTWK-Logos
-chapters/
-  frontmatter/  Pflicht-Vorspann (Sperrvermerk, Aufgabenstellung,
-                Abstract, Abkürzungs-/Symbolverzeichnis)
-  content/      eigene Kapitel  ← hier schreibst du
-  backmatter/   Anhang, Eidesstattliche Erklärung
-main.typ        Dokument-Reihenfolge (Vorspann → Hauptteil → Anhang)
-template.typ    Layout: project(), titlepage(), flex-caption()
+images/
+  logos/        HTWK-Logos (eigene Abbildungen: direkt in images/)
+formalia/       formale Pflichtteile (Deckblatt, Sperrvermerk,
+                Aufgabenstellung, Abstract, Abkürzungs-/Symbolverzeichnis,
+                Eidesstattliche Erklärung)
+chapters/       eigene Kapitel   ← hier schreibst du
+appendix/       Anhang           ← hier schreibst du
+main.typ        Dokument-Reihenfolge (Deckblatt → Vorspann → Hauptteil → Anhang)
+template.typ    Layout: project(), flex-caption()
 config.typ      Standardwerte (+ Merge der Overrides)
 references.bib  Literaturquellen
 ```

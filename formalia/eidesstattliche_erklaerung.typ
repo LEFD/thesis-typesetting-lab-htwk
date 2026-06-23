@@ -1,4 +1,4 @@
-#import "../../config.typ": cfg
+#import "../config.typ": cfg
 
 #heading(
   outlined: false,
