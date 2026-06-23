@@ -14,7 +14,7 @@
 // Dokumentvorlage  (Deckblatt: siehe formalia/deckblatt.typ)
 // ===========================================================================
 #let project(cfg: (:), body) = {
-  set document(author: cfg.vorname + " " + cfg.name, title: cfg.thema)
+  set document(author: cfg.vorname + " " + cfg.nachname, title: cfg.thema)
 
   set text(font: "New Computer Modern", lang: "de", size: 12pt)
   set par(justify: true, leading: 0.8em, first-line-indent: 0em)

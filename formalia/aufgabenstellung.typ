@@ -5,9 +5,9 @@
   gutter: 1em,
   align: (left, right),
   // linke Spalte: Fakultätsbezeichnung
-  [#image(cfg.logoFaculty, width: 70mm)],
+  [#image(cfg.logo-fakultaet, width: 70mm)],
   // rechte Spalte: HTWK-Block
-  [#image(cfg.logoHTWK, width: 50mm)],
+  [#image(cfg.logo-HTWK, width: 50mm)],
 )
 
 #align(center)[
@@ -20,7 +20,7 @@
   columns: (auto, 1fr),
   inset: 7pt,
   stroke: none,
-  [*von:*], [#cfg.vorname #cfg.name],
+  [*von:*], [#cfg.vorname #cfg.nachname],
   [*Thema:*], [#cfg.thema],
 )
 

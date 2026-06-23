@@ -1,30 +1,30 @@
-// Zentrale Konfiguration der Arbeit.
+// Zentrale Konfiguration der Arbeit (versionierte Standardwerte).
 //
-// Diese Datei enthält die VERSIONIERTEN Standardwerte der Vorlage.
-// Persönliche, NICHT versionierte Angaben gehören in `config-override.typ`
-// (siehe `config-override.example.typ`). Dort gesetzte Felder gewinnen.
+// Persönliche, nicht versionierte Angaben gehören in `config-override.typ`.
+// Dazu `config-override.example.typ` kopieren:
+//   cp config-override.example.typ config-override.typ
+
 #import "config-override.typ": overrides
 
 #let defaults = (
   vorname: "Maxi",
-  name: "Musterfrau",
-  arbeit: "Beleg-/Bachelor-/Masterarbeit",
+  nachname: "Musterfrau",
   studiengang: "Elektrotechnik und Informationstechnik",
   studienprofil: "Elektronische Schaltungstechnik und Signalverarbeitung",
+  arbeit-typ: "Beleg-/Bachelor-/Masterarbeit",
   thema: "Nachweis der Fähigkeit erlerntes Wissen anwenden zu können",
-  professor: "Prof. Dr. No",
-  chef: "Frau Yes",
-  faculty: "Fakultät Ingenieurwissenschaften",
+  betreuer-hochschule: "Prof. Dr. No",
+  betreuer-betrieb: "Frau Yes",
   ort: "Leipzig",
-  ausgabetermin: "01. Juli 2024",
-  abgabetermin: "23.09.2024",
-  // alternativ ein fester Wert, z. B. "01.01.2026"
+  termin-ausgabe: "01.07.2024",
+  termin-abgabe: "23.09.2024",
+  // oder fester Wert, z. B. "01.01.2026"
   datum: datetime.today().display("[day].[month].[year]"),
 
-  // HTWK-Logos (projekt-absolute Pfade, damit sie aus jeder Datei funktionieren)
-  logoHTWK: "/assets/logos/HTWK_Zusatz_de_V_Black_sRGB.png",
-  logoFaculty: "/assets/logos/HTWK-Fakultaetszusatz_ing_schwarz_de.png",
+  // HTWK-Logos (projekt-absolute Pfade)
+  logo-HTWK: "/images/logos/HTWK_Zusatz_de_V_Black_sRGB.png",
+  logo-fakultaet: "/images/logos/HTWK-Fakultaetszusatz_ing_schwarz_de.png",
 )
 
-// Zusammengeführte Konfiguration: Werte aus config-override.typ überschreiben.
+// Overrides überschreiben die Standardwerte.
 #let cfg = defaults + overrides

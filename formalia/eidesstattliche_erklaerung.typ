@@ -20,5 +20,5 @@ Ich bin mir bewusst, dass eine falsche Erklärung rechtliche Folgen haben wird.
   gutter: 0.3cm,
   stroke: none,
   [#line(length: 6cm)], [], [],
-  [#cfg.vorname #cfg.name], [], [],
+  [#cfg.vorname #cfg.nachname], [], [],
 )
