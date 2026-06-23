@@ -1,10 +1,10 @@
-# HTWK Typst – Vorlage für Abschlussarbeiten
+# HTWK Typst - Vorlage für Abschlussarbeiten
 
 Eine schlanke [Typst](https://typst.app/)-Vorlage für Beleg-, Bachelor- und
 Masterarbeiten im Stil der HTWK Leipzig.
 
 > ⚠️ **Kein offizielles Template der HTWK Leipzig.** Privates, experimentelles
-> Projekt. Die Nutzung für offizielle Abgaben erfolgt auf eigene Gefahr – die
+> Projekt. Die Nutzung für offizielle Abgaben erfolgt auf eigene Gefahr - die
 > Vorgaben der jeweiligen Fakultät sind eigenständig abzugleichen.
 
 ## Schnellstart
@@ -33,7 +33,7 @@ zwei Dateien:
 | `config-override.example.typ` | ✅ | Kopiervorlage für `config-override.typ`. |
 
 In `config-override.typ` werden nur die Felder gesetzt, die vom Standard
-abweichen – alle übrigen kommen aus `config.typ` (`defaults + overrides`).
+abweichen - alle übrigen kommen aus `config.typ` (`defaults + overrides`).
 
 
 ## Projektstruktur

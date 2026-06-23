@@ -9,7 +9,7 @@
 #include "formalia/deckblatt.typ"
 
 // ===========================================================================
-// Vorspann – römische Seitenzahlen (I, II, …)
+// Vorspann - römische Seitenzahlen (I, II, …)
 // ===========================================================================
 #frontmatter[
   #include "formalia/sperrvermerk.typ"
@@ -38,7 +38,7 @@
 ]
 
 // ===========================================================================
-// Hauptteil – arabische Seitenzahlen (1, 2, …)
+// Hauptteil - arabische Seitenzahlen (1, 2, …)
 // ===========================================================================
 #mainmatter[
   #include "chapters/einleitung.typ"
@@ -52,7 +52,7 @@
 ]
 
 // ===========================================================================
-// Anhang – römische Seitenzahlen (setzt den Vorspann fort)
+// Anhang - römische Seitenzahlen (setzt den Vorspann fort)
 // ===========================================================================
 #backmatter[
   #include "appendix/anhang.typ"

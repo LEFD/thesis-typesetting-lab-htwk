@@ -1,17 +1,18 @@
 #import "@preview/hydra:0.6.2": hydra
 
 // ===========================================================================
-// Hilfsfunktionen (vormals Sections/notwendig/globals.typ)
+// Flexible Bildunterschriften (lang im Text, kurz im Abbildungsverzeichnis)
 // ===========================================================================
 
-// true, solange ein #outline gesetzt wird – siehe flex-caption.
+// Interner Umschalter für flex-caption: `true`, während ein Verzeichnis
+// (#outline) gerendert wird. Aktiviert durch die show-Regel in project().
 #let in-outline = state("in-outline", false)
 
-// Lange Bildunterschrift im Fließtext, kurze Fassung im Abbildungsverzeichnis.
+// Bildunterschrift je nach Kontext: im Abbildungsverzeichnis kurz, im Fließtext lang
 #let flex-caption(long, short) = context if in-outline.get() { short } else { long }
 
 // ===========================================================================
-// Dokumentvorlage  (Deckblatt: siehe formalia/deckblatt.typ)
+// Dokumentvorlage
 // ===========================================================================
 #let project(cfg: (:), body) = {
   set document(author: cfg.vorname + " " + cfg.nachname, title: cfg.thema)
@@ -35,8 +36,8 @@
     paper: "a4",
     margin: (x: 25mm, top: 25mm, bottom: 35mm),
     header: context [
-      // skip-starting: true -> auf der Startseite eines Abschnitts kein Name im Header
-      #align(right, text(fill: luma(50%), hydra(1, skip-starting: false)))
+      // skip-starting: true -> auf der Startseite eines Abschnitts kein Kapitelname im Header
+      #align(right, text(fill: luma(50%), hydra(1, skip-starting: true)))
       #line(length: 100%, stroke: 0.5pt)
     ],
     footer: context [
@@ -60,7 +61,7 @@
 // Anhang setzt die römische Zählung des Vorspanns fort.
 // ===========================================================================
 
-// Letzter römischer Seitenstand des Vorspanns – für den Anhang gemerkt.
+// Letzter römischer Seitenstand des Vorspanns - für den Anhang gemerkt.
 #let roman-end = state("roman-end", 1)
 
 #let frontmatter(body) = {
