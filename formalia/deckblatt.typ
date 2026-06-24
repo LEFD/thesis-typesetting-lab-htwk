@@ -9,9 +9,13 @@
     gutter: 1em,
     align: (left, right),
     // linke Spalte: Fakultätsbezeichnung
-    [#image(cfg.logo-fakultaet, width: 70mm)],
+    // Buchstaben Fakultätsabkürzung sollen die gleiche Höhe haben, wie der HTWK Schriftzug
+    [#move(dy: -2.1mm)[#image(cfg.logo-fakultaet, height: 16.64mm)]],
+    // "height 16.64 mm" entspricht Buchstabenhöhe von ca. 10 mm
     // rechte Spalte: HTWK-Block
-    [#image(cfg.logo-HTWK, width: 50mm)],
+    // HTWK Schriftzug Breite: 40 mm
+    [#image(cfg.logo-HTWK, width: 41mm)],
+    // "width 41 mm" entspricht einer Breite der HTWK Schriftzuges von 40 mm, resultierende Höhe ca. 10 mm
   )
 
   #v(2cm)
@@ -42,8 +46,7 @@
     columns: (1fr, 1fr),
     gutter: 1em,
     align: (left, right),
-    [#text(size: 10pt)[Ausgabetermin: #cfg.termin-ausgabe]],
-    [#text(size: 10pt)[Abgabetermin: #cfg.termin-abgabe]],
+    [#text(size: 10pt)[Ausgabetermin: #cfg.termin-ausgabe]], [#text(size: 10pt)[Abgabetermin: #cfg.termin-abgabe]],
   )
 
   #v(1cm)
