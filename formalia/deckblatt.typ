@@ -3,6 +3,7 @@
 // Deckblatt / Titelseite im HTWK-Stil.
 // Eigener #page-Block ohne Kopf-/Fußzeile und ohne Seitenzahl.
 #page(header: none, footer: none, numbering: none)[
+  #set par(justify: false)
   #v(6mm)
   #grid(
     columns: (1fr, 1fr),
