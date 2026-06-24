@@ -15,22 +15,24 @@
 
   #align(center)[
     #v(1cm)
-    #text(size: 20pt, weight: "bold")[Aufgabenstellung zur Abschlussarbeit]
+    #text(size: 20pt, weight: "bold")[Aufgabenstellung zur #cfg.arbeit-typ]
+
+    #text()[*von* #cfg.vorname #cfg.nachname]
   ]
 
-  #v(0.8cm)
-  #table(
-    columns: (auto, 1fr),
-    inset: 7pt,
-    stroke: none,
-    [*von:*], [#cfg.vorname #cfg.nachname],
-    [*Thema:*], [#cfg.thema],
-  )
+  #heading(
+    outlined: false,
+    numbering: none,
+    level: 3,
+  )[Thema]
 
-  #v(1cm)
-  #grid(
-    columns: (3cm, 1fr),
-    gutter: 0cm,
-    [*Erläuterung:*], [Bitte fügen Sie die bei der Anmeldung der Abschlussarbeit genehmigte Aufgabenstellung ein.],
-  )
+  #cfg.thema
+
+  #heading(
+    outlined: false,
+    numbering: none,
+    level: 3,
+  )[Beschreibung]
+
+  _*Bitte fügen Sie die bei der Anmeldung der Abschlussarbeit genehmigte Aufgabenstellung ein.*_ // <- edit here
 ]
