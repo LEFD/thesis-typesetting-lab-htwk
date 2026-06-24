@@ -1,4 +1,5 @@
 {
     "editor.wordWrap": "on",
-    "tinymist.outputPath": "$root/.export/$name"
+    "tinymist.outputPath": "$root/.export/$name",
+    "task.allowAutomaticTasks": "on"
 }

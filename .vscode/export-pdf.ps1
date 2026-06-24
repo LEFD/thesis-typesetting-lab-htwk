@@ -15,6 +15,10 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 
+# config-override.typ bei Bedarf aus der Vorlage erstellen (Sicherheitsnetz,
+# falls der automatische VS-Code-Task nicht gelaufen ist).
+& (Join-Path $PSScriptRoot 'init-config-override.ps1')
+
 function Get-CfgValue {
     param([Parameter(Mandatory)][string]$Key)
     # config-override.typ hat Vorrang vor config.typ (defaults + overrides).

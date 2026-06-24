@@ -2,17 +2,50 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "config-override.typ anlegen",
+            "detail": "Erstellt config-override.typ aus der Vorlage, falls noch nicht vorhanden (läuft beim Öffnen des Ordners).",
+            "type": "process",
+            "command": "sh",
+            "args": [
+                "${workspaceFolder}/.vscode/init-config-override.sh"
+            ],
+            "windows": {
+                "command": "powershell.exe",
+                "args": [
+                    "-NoProfile",
+                    "-ExecutionPolicy",
+                    "Bypass",
+                    "-File",
+                    "${workspaceFolder}/.vscode/init-config-override.ps1"
+                ]
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "Arbeit als PDF exportieren",
             "detail": "Exportiert main.typ nach .export/<Datum> <Typ> <Vorname> <Nachname>.pdf",
             "type": "process",
-            "command": "powershell.exe",
+            "command": "sh",
             "args": [
-                "-NoProfile",
-                "-ExecutionPolicy",
-                "Bypass",
-                "-File",
-                "${workspaceFolder}/.vscode/export-pdf.ps1"
+                "${workspaceFolder}/.vscode/export-pdf.sh"
             ],
+            "windows": {
+                "command": "powershell.exe",
+                "args": [
+                    "-NoProfile",
+                    "-ExecutionPolicy",
+                    "Bypass",
+                    "-File",
+                    "${workspaceFolder}/.vscode/export-pdf.ps1"
+                ]
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
