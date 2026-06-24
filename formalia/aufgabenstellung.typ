@@ -10,8 +10,7 @@
     columns: (1fr, 1fr),
     gutter: 1em,
     align: (left, right),
-    [#move(dy: -2.1mm)[#image(cfg.logo-fakultaet, height: 16.64mm)]],
-    [#image(cfg.logo-HTWK, width: 41mm)],
+    [#move(dy: -2.1mm)[#image(cfg.logo-fakultaet, height: 16.64mm)]], [#image(cfg.logo-HTWK, width: 41mm)],
   )
 
   #align(center)[

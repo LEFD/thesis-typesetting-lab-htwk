@@ -41,7 +41,7 @@ In dieser Vorlage hier wurde eine weitere Funktion hinzugefügt, um die Bildunte
   rect(width: 70%, height: 4.5cm, fill: rgb("eef")),
   caption: flex-caption(
     [Hier sieht man den Text, der angezeigt wird, und ein Bild.  (Quelle: Eigene Aufnahme)],
-    [Und hier sieht man jetzt den Text, der im Abbildungsverzeichnis erscheint. ]
+    [Und hier sieht man jetzt den Text, der im Abbildungsverzeichnis erscheint. ],
   ),
 ) <fig:htwk_logo_new>
 
@@ -87,9 +87,9 @@ Die Tabellen-Umgebung eignet sich zur strukturierten Darstellung von Daten.
 Für Verlinkungen zu Webseiten kann die Linkfunktion eingesetzt werden: #link("https://www.zahlen-kern.de/editor")[Formeleditor].
 
 
-== Code einfügen 
+== Code einfügen
 
-Um Code im Text einzufügen, kann man das wie folgt umsetzen: 
+Um Code im Text einzufügen, kann man das wie folgt umsetzen:
 
 ```python
 a + b = c

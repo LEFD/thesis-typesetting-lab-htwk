@@ -1,16 +1,14 @@
 #import "config.typ": cfg
-#import "template.typ": project, frontmatter, mainmatter, backmatter
+#import "template.typ": backmatter, frontmatter, mainmatter, project
 
 #show: project.with(cfg: cfg)
 
-// ===========================================================================
 // Deckblatt
-// ===========================================================================
+
 #include "formalia/deckblatt.typ"
 
-// ===========================================================================
 // Vorspann - römische Seitenzahlen (I, II, …)
-// ===========================================================================
+
 #frontmatter[
   #include "formalia/sperrvermerk.typ"
   #pagebreak()
@@ -37,9 +35,8 @@
   #pagebreak()
 ]
 
-// ===========================================================================
 // Hauptteil - arabische Seitenzahlen (1, 2, …)
-// ===========================================================================
+
 #mainmatter[
   #include "chapters/einleitung.typ"
   #pagebreak()
@@ -51,9 +48,8 @@
   #pagebreak()
 ]
 
-// ===========================================================================
 // Anhang - römische Seitenzahlen (setzt den Vorspann fort)
-// ===========================================================================
+
 #backmatter[
   #include "appendix/anhang.typ"
   #pagebreak()
