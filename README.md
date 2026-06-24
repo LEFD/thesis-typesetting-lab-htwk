@@ -9,17 +9,25 @@ Masterarbeiten im Stil der HTWK Leipzig.
 
 ## Schnellstart
 
-1. Repository öffnen (VS Code mit der Erweiterung
-   [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist).
-2. Einmalig die *lokale* Konfiguration anlegen:
+1. Eigenes Repo von dieser Template erstellen
+1. Repository lokal in VS Code öffnen (mit Erweiterung
+   [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist))
+1. Einmalig die *lokale* Konfiguration anlegen (das Projekt kompiliert sonst nicht):
 
    ```sh
    cp config-override.example.typ config-override.typ
    ```
 
-3. `main.typ` öffnen und die Live-Vorschau von Tinymist starten.
-4. Persönliche Daten in `config-override.typ` eintragen, Inhalte in
-   `chapters/` schreiben.
+   oder:
+
+   in VS Code den Task `config-override.typ anlegen` ausführen
+
+1. `main.typ` öffnen und die Live-Vorschau von Tinymist starten
+
+    Klicke dazu oben rechts im Editor-Fenster auf das Live Preview Icon (ein kleines Dokument mit einer Lupe)
+
+1. Persönliche Daten in `config-override.typ` eintragen, Inhalte in
+   `chapters/` schreiben
 
 ## Konfiguration
 
@@ -32,24 +40,20 @@ zwei Dateien:
 | `config-override.typ` | ❌ (git-ignored) | Deine persönlichen Werte. Überschreibt einzelne Felder aus `config.typ`. |
 | `config-override.example.typ` | ✅ | Kopiervorlage für `config-override.typ`. |
 
-In `config-override.typ` werden nur die Felder gesetzt, die vom Standard
-abweichen - alle übrigen kommen aus `config.typ` (`defaults + overrides`).
-
-
 ## Projektstruktur
 
 ```text
-images/
-  logos/        HTWK-Logos (eigene Abbildungen: direkt in images/)
-formalia/       formale Pflichtteile (Deckblatt, Sperrvermerk,
-                Aufgabenstellung, Abstract, Abkürzungs-/Symbolverzeichnis,
-                Eidesstattliche Erklärung)
-chapters/       eigene Kapitel   ← hier schreibst du
-appendix/       Anhang           ← hier schreibst du
-main.typ        Dokument-Reihenfolge (Deckblatt → Vorspann → Hauptteil → Anhang)
-template.typ    Layout: project(), flex-caption()
-config.typ      Standardwerte (+ Merge der Overrides)
-references.bib  Literaturquellen
+appendix/             Anhang           ← hier schreibst du
+chapters/             eigene Kapitel   ← hier schreibst du
+formalia/             formale Pflichtteile (Deckblatt, Sperrvermerk, ...)
+images/               eigene Abbildungen
+  logos/              HTWK Logos
+
+config.typ            Konfiguration (im Git Tracking)
+config-override.typ   Konfiguration für private Daten (vom Git Tracking ausgeschlossen)
+main.typ              Dokument-Reihenfolge (Deckblatt → Vorspann → Hauptteil → Anhang)
+template.typ          Formatierung und Funktionen des Projektes
+references.bib        Literaturquellen
 ```
 
 - **Seitenzahlen:** Vorspann römisch (`I, II, …`), Hauptteil arabisch
@@ -59,7 +63,7 @@ references.bib  Literaturquellen
 
 ## Projekt Exportieren
 
-Dem Projekt liegt ein Powershell Script bei, welches die Arbeit kompiliert und einen deskriptiven Dateinamen vergibt. Die kompilierte PDF Datei befindet sich dann im Order `.export`. In VS Code kann das Script mit "Run Build Task" (Taskenkombination: `Ctrl` + `Shift` + `B`) aufgerufen werden.
+Dem Projekt liegt ein Script bei, welches die Arbeit kompiliert und einen deskriptiven Dateinamen vergibt. Die kompilierte PDF Datei befindet sich dann im Order `.export`. In VS Code kann das Script mit "Run Build Task" (Taskenkombination: `Ctrl` + `Shift` + `B`) aufgerufen werden.
 
 ## KI-Hinweis
 
