@@ -1,0 +1,22 @@
+{
+    "Abbildung (figure mit flex-caption)": {
+        "scope": "typst",
+        "prefix": [
+            "image",
+            "abbildung",
+            "bild"
+        ],
+        "description": "Fügt ein Bild als #figure mit kurzer und langer Bildunterschrift sowie Label ein",
+        "body": [
+            "#figure(",
+            "  image(",
+            "    \"${1:path/to/image.ext}\",",
+            "  ),",
+            "  caption: flex-caption(",
+            "    [${2:Bildunterschrift (lang)}],",
+            "    [${3:Bildunterschrift im Abbildungsverzeichnis (kurz)}],",
+            "  ),",
+            ") <fig:${4:name-of-picture}>$0"
+        ]
+    }
+}
