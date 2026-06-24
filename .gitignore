@@ -1,5 +1,6 @@
 # Kompilierte Ausgabe
 *.pdf
+.export/
 
 # Lokale, nicht versionierte Konfiguration (siehe config-override.example.typ)
 config-override.typ

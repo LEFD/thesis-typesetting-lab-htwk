@@ -57,6 +57,10 @@ references.bib  Literaturquellen
 - **`flex-caption(lang, kurz)`** in `template.typ` erlaubt eine lange
   Bildunterschrift im Text und eine kurze im Abbildungsverzeichnis.
 
+## Projekt Exportieren
+
+Dem Projekt liegt ein Powershell Script bei, welches die Arbeit kompiliert und einen deskriptiven Dateinamen vergibt. Die kompilierte PDF Datei befindet sich dann im Order `.export`. In VS Code kann das Script mit "Run Build Task" (Taskenkombination: `Ctrl` + `Shift` + `B`) aufgerufen werden.
+
 ## KI-Hinweis
 
 > 🤖 Teile dieser Vorlage (Struktur, Code und Dokumentation) wurden mit
