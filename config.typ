@@ -27,4 +27,5 @@
 )
 
 // Overrides überschreiben die Standardwerte.
-#let cfg = defaults + overrides
+// Leeres bzw. fehlendes Override (z. B. alle Felder auskommentiert) wird toleriert.
+#let cfg = defaults + (if type(overrides) == dictionary { overrides } else { (:) })
