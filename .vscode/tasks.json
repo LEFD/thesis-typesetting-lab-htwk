@@ -7,7 +7,7 @@
             "type": "process",
             "command": "sh",
             "args": [
-                "${workspaceFolder}/.vscode/init-config-override.sh"
+                "${workspaceFolder}/.vscode/scripts/init-config-override.sh"
             ],
             "windows": {
                 "command": "powershell.exe",
@@ -16,7 +16,7 @@
                     "-ExecutionPolicy",
                     "Bypass",
                     "-File",
-                    "${workspaceFolder}/.vscode/init-config-override.ps1"
+                    "${workspaceFolder}/.vscode/scripts/init-config-override.ps1"
                 ]
             },
             "runOptions": {
@@ -34,7 +34,7 @@
             "type": "process",
             "command": "sh",
             "args": [
-                "${workspaceFolder}/.vscode/export-pdf.sh"
+                "${workspaceFolder}/.vscode/scripts/export-pdf.sh"
             ],
             "windows": {
                 "command": "powershell.exe",
@@ -43,7 +43,7 @@
                     "-ExecutionPolicy",
                     "Bypass",
                     "-File",
-                    "${workspaceFolder}/.vscode/export-pdf.ps1"
+                    "${workspaceFolder}/.vscode/scripts/export-pdf.ps1"
                 ]
             },
             "group": {

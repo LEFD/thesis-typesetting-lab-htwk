@@ -4,8 +4,7 @@
 # Aufgerufen von .vscode/tasks.json (folderOpen) und von export-pdf.ps1.
 $ErrorActionPreference = 'Stop'
 
-# Projektwurzel = Ordner oberhalb dieses Skripts (.vscode)
-$root = Split-Path -Parent $PSScriptRoot
+$root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 
 $override = Join-Path $root 'config-override.typ'
 $example  = Join-Path $root 'config-override.example.typ'

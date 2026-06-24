@@ -11,8 +11,8 @@
 
 $ErrorActionPreference = 'Stop'
 
-# Projektwurzel = Ordner oberhalb von .vscode
-$root = Split-Path -Parent $PSScriptRoot
+# Projektwurzel = zwei Ebenen oberhalb dieses Skripts (.vscode/scripts)
+$root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 Set-Location $root
 
 # config-override.typ bei Bedarf aus der Vorlage erstellen (Sicherheitsnetz,

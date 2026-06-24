@@ -9,9 +9,9 @@
 # Aufgerufen vom VS-Code-Task "Arbeit als PDF exportieren".
 set -eu
 
-# Projektwurzel = Ordner oberhalb dieses Skripts (.vscode)
+# Projektwurzel = zwei Ebenen oberhalb dieses Skripts (.vscode/scripts)
 scriptdir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-root=$(CDPATH= cd -- "$scriptdir/.." && pwd)
+root=$(CDPATH= cd -- "$scriptdir/../.." && pwd)
 cd "$root"
 
 # config-override.typ bei Bedarf aus der Vorlage erstellen (Sicherheitsnetz,

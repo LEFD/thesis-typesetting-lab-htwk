@@ -4,8 +4,7 @@
 # Aufgerufen von .vscode/tasks.json (folderOpen).
 set -eu
 
-# Projektwurzel = Ordner oberhalb dieses Skripts (.vscode)
-root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+root=$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd)
 
 override="$root/config-override.typ"
 example="$root/config-override.example.typ"
