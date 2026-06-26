@@ -58,5 +58,5 @@
   #bibliography("references.bib", style: "ieee", title: none)
   #pagebreak()
 
-  #include "formalia/eidesstattliche_erklaerung.typ"
+  #include "formalia/ehrenwoertliche_erklarung.typ"
 ]
