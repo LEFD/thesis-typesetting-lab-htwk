@@ -1,15 +1,13 @@
 # HTWK Typst - Vorlage für Abschlussarbeiten
 
-Eine schlanke [Typst](https://typst.app/)-Vorlage für Beleg-, Bachelor- und
+Eine [Typst](https://typst.app/)-Vorlage für Beleg-, Bachelor- und
 Masterarbeiten im Stil der HTWK Leipzig.
 
-> ⚠️ **Kein offizielles Template der HTWK Leipzig.** Privates, experimentelles
-> Projekt. Die Nutzung für offizielle Abgaben erfolgt auf eigene Gefahr - die
-> Vorgaben der jeweiligen Fakultät sind eigenständig abzugleichen.
+> ⚠️ **Kein offizielles Template der HTWK Leipzig!** Dieses Projekt befindet sich in der Entwicklung. Die Nutzung für offizielle Abgaben erfolgt auf eigene Gefahr - die Vorgaben der jeweiligen Fakultät sind eigenständig abzugleichen.
 
 ## Schnellstart
 
-1. Eigenes Repo von dieser Template erstellen
+1. Eigenes Repository von dieser Template erstellen
 1. Repository lokal in VS Code öffnen (mit Erweiterung
    [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist))
 1. Einmalig die *lokale* Konfiguration anlegen (das Projekt kompiliert sonst nicht):
@@ -38,7 +36,6 @@ zwei Dateien:
 | --- | --- | --- |
 | `config.typ` | ✅ | Standardwerte der Vorlage. (Hier nichts Persönliches eintragen). |
 | `config-override.typ` | ❌ (git-ignored) | Deine persönlichen Werte. Überschreibt einzelne Felder aus `config.typ`. |
-| `config-override.example.typ` | ✅ | Kopiervorlage für `config-override.typ`. |
 
 ## Projektstruktur
 

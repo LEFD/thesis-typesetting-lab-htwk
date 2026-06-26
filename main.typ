@@ -46,16 +46,16 @@
 
   #include "chapters/ausblick.typ"
   #pagebreak()
+
+  = Literaturverzeichnis <sec:literatur>
+  #bibliography("references.bib", style: "ieee", title: none)
+  #pagebreak()
 ]
 
 // Anhang - römische Seitenzahlen (setzt den Vorspann fort)
 
 #backmatter[
   #include "appendix/anhang.typ"
-  #pagebreak()
-
-  = Literaturverzeichnis <sec:literatur>
-  #bibliography("references.bib", style: "ieee", title: none)
   #pagebreak()
 
   #include "formalia/ehrenwoertliche_erklarung.typ"
