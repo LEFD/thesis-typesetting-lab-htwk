@@ -1,4 +1,7 @@
 #align(center)[
   #v(1cm)
-  #text(size: 22pt, weight: "bold")[Sperrvermerk]
+  #heading(
+    outlined: false,
+    numbering: none,
+  )[#text(size: 22pt)[Sperrvermerk]]
 ]

@@ -19,7 +19,7 @@
 
   set text(font: "New Computer Modern", lang: "de", size: 12pt)
   set par(justify: true, leading: 0.8em, first-line-indent: 0em)
-  set heading(numbering: "1.1")
+  set heading(numbering: "1.1.")
   set math.equation(numbering: "(1)")
 
   show figure.caption: it => [
@@ -35,11 +35,16 @@
   set page(
     paper: "a4",
     margin: (x: 25mm, top: 25mm, bottom: 35mm),
-    header: context [
-      // skip-starting: true -> auf der Startseite eines Abschnitts kein Kapitelname im Header
-      #align(right, text(fill: luma(50%), hydra(1, skip-starting: true)))
-      #line(length: 100%, stroke: 0.5pt)
-    ],
+    header: context {
+      // kein faint Kapitelname, keine Trennlinie wenn H1 Überschrift auf der Seite
+      let starts-with-heading = query(heading.where(level: 1)).any(h => (
+        h.location().page() == here().page()
+      ))
+      if not starts-with-heading {
+        align(right, text(fill: luma(50%), hydra(1)))
+        line(length: 100%, stroke: 0.5pt)
+      }
+    },
     footer: context [
       #line(length: 100%, stroke: 0.5pt)
       #v(2mm)
