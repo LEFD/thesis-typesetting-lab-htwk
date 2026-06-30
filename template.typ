@@ -19,7 +19,7 @@
 
   set text(font: "New Computer Modern", lang: "de", size: 12pt)
   set par(justify: true, leading: 0.8em, first-line-indent: 0em)
-  set heading(numbering: "1.1.")
+  set heading(numbering: "1.1")
   set math.equation(numbering: "(1)")
 
   show figure.caption: it => [
@@ -41,13 +41,15 @@
         h.location().page() == here().page()
       ))
       if not starts-with-heading {
-        align(right, text(fill: luma(50%), hydra(1)))
-        line(length: 100%, stroke: 0.5pt)
+        set par(leading: 0.4em, spacing: 0.4em)
+        align(right, text(style: "normal", fill: luma(50%), hydra(1))) // style should be "oblique", but the New Computer Modern font does not have a serif oblique variant
+        line(length: 100%, stroke: 0.5pt + luma(50%))
       }
     },
     footer: context [
-      #line(length: 100%, stroke: 0.5pt)
-      #v(2mm)
+      #set par(leading: 0.4em, spacing: 0.4em)
+      #line(length: 100%, stroke: 0.5pt + luma(50%))
+      #v(1mm)
       #align(right)[#counter(page).display()]
     ],
   )
