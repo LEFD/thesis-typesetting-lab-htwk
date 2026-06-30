@@ -1,4 +1,4 @@
-#import "../config.typ": cfg
+#import "/config.typ": cfg
 
 /* Ehrenwörtliche Erklärung von: Prof. Dr. Rüdiger Ulrich: Merkblatt Projektarbeit in der Praxisphase bei Bachelor- und Master-Studiengängen (Stand: 06/2024), Anlage 4: Muster der ehrenwörtlichen Erklärung; Fakultät Wirtschaftswissenschaft und Wirtschaftsingenieurwesen */
 

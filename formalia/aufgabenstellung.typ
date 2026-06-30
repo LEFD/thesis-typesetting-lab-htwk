@@ -1,4 +1,4 @@
-#import "../config.typ": cfg
+#import "/config.typ": cfg
 
 #grid(
   columns: (1fr, 1fr),

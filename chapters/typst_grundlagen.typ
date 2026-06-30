@@ -1,4 +1,5 @@
-#import "../template.typ": flex-caption
+#import "/template.typ": flex-caption
+
 = Kapitel: Formatierung <sec:formatierung>
 
 Diese Vorlage ist wie folgt formatiert:
@@ -34,7 +35,7 @@ Die Platzhaltergrafik ist mit dem Label @fig:htwk_logo referenzierbar.
 In dieser Vorlage hier wurde eine weitere Funktion hinzugefügt, um die Bildunterschriften besser anpassen zu können. Hier wurde eine neue Funktion eingefügt, welche dafür sorgt, dass einmal der Text angegeben werden kann, der unter dem Bild angezeigt werden soll und einmal der Text angegeben werden kann, der im Abbildungsverzeichnis auftauchen soll. Um diese Funktion nutzen zu können, muss ganz oben in der Datei folgendes noch eingefügt werden:
 
 ```typ
-#import "../template.typ": flex-caption
+#import "//template.typ": flex-caption
 ```
 
 #figure(

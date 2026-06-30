@@ -1,3 +1,5 @@
+#import "/template.typ": flex-caption
+
 = Einleitung <sec:einleitung>
 
 An dieser Stelle stehen die ersten Worte der Arbeit.

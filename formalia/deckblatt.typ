@@ -1,4 +1,4 @@
-#import "../config.typ": cfg
+#import "/config.typ": cfg
 
 // Deckblatt / Titelseite im HTWK-Stil.
 // Eigener #page-Block ohne Kopf-/Fußzeile und ohne Seitenzahl.

@@ -10,7 +10,7 @@
         "body": [
             "#figure(",
             "  image(",
-            "    \"${1:path/to/image.ext}\",",
+            "    \"/images/${1:placeholder.png}\",",
             "  ),",
             "  caption: flex-caption(",
             "    [${2:Bildunterschrift (lang)}],",
